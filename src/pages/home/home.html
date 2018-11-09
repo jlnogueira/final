@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Lista de Alunos
+    </ion-title>
+
+    <ion-buttons end>
+      <button navPush="AddAlunoPage" ion-button>
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      Alunos
+    </ion-list-header>
+
+    <ion-item *ngFor="let aluno of alunoList | async"
+    detail-push navPush="EditAlunoPage" [navParams]="{aluno:aluno}">
+      {{aluno.nome}}
+    </ion-item>
+  </ion-list>
+</ion-content>

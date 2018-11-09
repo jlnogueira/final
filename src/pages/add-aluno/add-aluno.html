@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Adiciona Aluno</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label>Nome</ion-label>
+    <ion-input [(ngModel)]="aluno.nome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-textarea [(ngModel)]="aluno.email"></ion-textarea>
+  </ion-item>
+
+  <button ion-button block clear (click)="addAluno(aluno)">Adiciona</button>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{aluno?.nome}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label>Nome</ion-label>
+    <ion-input [(ngModel)]="aluno.nome" placeholder="Java Sample Approach"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-textarea [(ngModel)]="aluno.email" placeholder="Java Technology - Spring Framework"></ion-textarea>
+  </ion-item>
+
+  <button ion-button block clear (click)="updateAluno(aluno)">Atualizar</button>
+  <button ion-button block clear (click)="removeAluno(aluno)">Apagar</button>
+</ion-content>
