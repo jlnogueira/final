@@ -3,26 +3,24 @@
     <ion-title>
       Escreva Algo
     </ion-title>
-
     <ion-buttons end>
-      <button ion-button icon-only (click)="addAluno(aluno)">
-        <ion-icon  name="checkmark-circle-outline"></ion-icon>
+      <button ion-button icon-only>
+        <ion-icon name="camera"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
-  
 </ion-header>
 <ion-content padding id="page5" style="background-color:#ADD8E6;">
   <ion-item>
-    <ion-label>Titulo:</ion-label>
+    <ion-label>Nome</ion-label>
     <ion-input [(ngModel)]="aluno.nome"></ion-input>
   </ion-item>
 
-  <ion-item  >
-    <ion-label >Escreva:</ion-label>
-    <ion-textarea id="tamanho" cols="5" rows="40"  [(ngModel)]="aluno.email"></ion-textarea>
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-textarea [(ngModel)]="aluno.email"></ion-textarea>
   </ion-item>
 
-  
+  <button ion-button block clear (click)="addAluno(aluno)">Adiciona</button>
 
 </ion-content>

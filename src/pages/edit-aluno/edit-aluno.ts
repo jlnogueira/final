@@ -27,13 +27,13 @@ export class EditAlunoPage {
 
   updateAluno(aluno: Aluno) {
     this.alunoListService.updateAluno(aluno).then(() => {
-      this.navCtrl.setRoot('HomePage');
+      this.navCtrl.setRoot('OlaPage');
     })
   }
 
   removeAluno(aluno: Aluno) {
     this.alunoListService.removeAluno(aluno).then(() => {
-      this.navCtrl.setRoot('HomePage');
+      this.navCtrl.setRoot('OlaPage');
     })
   }
 }

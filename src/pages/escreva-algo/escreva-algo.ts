@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { Aluno } from '../../model/aluno/aluno.model';
 import { AlunoListService } from '../../services/aluno-list.service';
 import { DiarioPage } from '../diario/diario';
 
-@IonicPage()
 @Component({
-  selector: 'page-add-aluno',
-  templateUrl: 'add-aluno.html',
+  selector: 'page-escreva-algo',
+  templateUrl: 'escreva-algo.html'
 })
-export class AddAlunoPage {
-
+export class EscrevaAlgoPage {
   aluno: Aluno = {
     nome: '',
     email: ''
@@ -23,13 +21,15 @@ export class AddAlunoPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AddAlunoPage');
+    console.log('ionViewDidLoad EscrevaAlgoPage');
   }
 
   addAluno(aluno: Aluno) {
     this.alunoListService.addAluno(aluno).then(ref => {
-      this.navCtrl.setRoot('OlaPage');
+      this.navCtrl.setRoot(DiarioPage);
     })
   }
 
 }
+  
+

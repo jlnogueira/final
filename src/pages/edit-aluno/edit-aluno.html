@@ -2,11 +2,23 @@
 
   <ion-navbar>
     <ion-title>{{aluno?.nome}}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="updateAluno(aluno)">
+        <ion-icon  name="build"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="removeAluno(aluno)">
+        <ion-icon  name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
-<ion-content padding>
+<ion-content padding padding id="page5" style="background-color:#ADD8E6;">
 
   <ion-item>
     <ion-label>Nome</ion-label>
@@ -15,9 +27,8 @@
 
   <ion-item>
     <ion-label>Email</ion-label>
-    <ion-textarea [(ngModel)]="aluno.email" placeholder="Java Technology - Spring Framework"></ion-textarea>
+    <ion-textarea id="tamanho" cols="5" rows="40" [(ngModel)]="aluno.email" placeholder="Java Technology - Spring Framework"></ion-textarea>
   </ion-item>
 
-  <button ion-button block clear (click)="updateAluno(aluno)">Atualizar</button>
-  <button ion-button block clear (click)="removeAluno(aluno)">Apagar</button>
+ 
 </ion-content>

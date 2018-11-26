@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Localização
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page4" style="background-color:#DEE9EC;">
+
+  <ion-list>
+    <ion-item>
+      <ion-label>De onde?</ion-label>
+      <ion-input type="text" [(ngModel)]="originPosition"></ion-input>
+    </ion-item>
+
+
+
+    <div padding>
+      <button ion-button (click)="calculateRoute()">Traçar rota</button>
+    </div>
+  </ion-list>
+
+  <div #map id="map"></div>
+
+</ion-content>
